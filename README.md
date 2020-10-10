@@ -9,13 +9,13 @@ This typora theme is inspired by the [Gitbook](https://www.gitbook.com) document
 ## Screenshots
 
 ### Light
-![img](images/gitbooklight_main)
-![img](images/gitbooklight_megamenu)
-![img](images/gitbooklight_ui)
-![img](images/gitbooklight_themes)
+![img](gitbooklight_main)
+![img](gitbooklight_megamenu)
+![img](gitbooklight_ui)
+![img](gitbooklight_themes)
 
 ### Dark
-![img](images/gitbookdark_main)
-![img](images/gitbookdark_megamenu)
-![img](images/gitbookdark_ui)
-![img](images/gitbookdark_themes)
+![img](gitbookdark_main)
+![img](gitbookdark_megamenu)
+![img](gitbookdark_ui)
+![img](gitbookdark_themes)
