@@ -6,6 +6,9 @@ This typora theme is inspired by the [Gitbook](https://www.gitbook.com) document
 2. Copy the `gitbook-light.css` file and `gitbook-dark.css` file as well as the folder `gitbook` to your Typora theme library.
 3. Launch or restart Typora and choose Gitbook Light or Gitbook Dark from the theme menu.
 
+## Contributing
+Feel free submit an issue, if something does not work or look right. If you would like to, you can also create your variant of this theme. 
+
 ## Screenshots
 
 ### Light
