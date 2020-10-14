@@ -1,3 +1,5 @@
+**Still in BETA. Most things aren´t final. Expect regular updates.**
+
 # Gitbook Theme For Typora
 This typora theme is inspired by the [Gitbook](https://www.gitbook.com) document style. Nearly all user interfaces have been redesigned. It contains both a light and a dark theme. For best experience turn on `Preference Panel > Appearance > Unibody`.
 
