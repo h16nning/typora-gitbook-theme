@@ -1,7 +1,7 @@
 # Gitbook Theme For Typora
 This typora theme is inspired by the [Gitbook](https://www.gitbook.com) document style. Nearly all user interfaces have been redesigned. It contains both a light and a dark theme. For best experience turn on `Preference Panel > Appearance > Unibody`.
 
-> This theme has been developed and tested for Windows 10 (both Classic and Unibody style). It has not been tested on macOS nor Linux. However, the core theme (not the UI still should still work).
+> This theme has been developed and tested for Windows 10 (both Classic and Unibody style). It has not been tested on macOS nor Linux. However, the core theme (not the UI) should work.
 ## Installation instructions
 1. Download the zipped project package.
 2. Copy the `gitbook-light.css` file and `gitbook-dark.css` file as well as the folder `gitbook` to your Typora theme library.
