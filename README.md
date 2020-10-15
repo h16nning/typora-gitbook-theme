@@ -5,7 +5,7 @@ This typora theme is inspired by the [Gitbook](https://www.gitbook.com) document
 
 > This theme has been developed and tested for Windows 10 (both Classic and Unibody style). It has not been tested on macOS nor Linux. However, the core theme (not the UI) should work.
 ## Installation instructions
-1. Download the zipped project package [here](https://github.com/Henning16/typora-gitbook-theme/releases).
+1. Download the zipped project package [here](https://github.com/Henning16/typora-gitbook-theme/releases/latest).
 2. Copy the `gitbook-light.css` file and `gitbook-dark.css` file as well as the folder `gitbook` to your Typora theme library.
 3. Launch or restart Typora and choose Gitbook Light or Gitbook Dark from the theme menu.
 
