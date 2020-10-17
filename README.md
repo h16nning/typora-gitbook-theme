@@ -14,6 +14,8 @@ Feel free [to submit an issue](https://github.com/Henning16/typora-gitbook-theme
 
 ## Screenshots
 
+![img](gitbook.png)
+
 ### Light
 ![img](gitbooklight_main.png)
 ![img](gitbooklight_megamenu.png)
