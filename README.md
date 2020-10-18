@@ -8,7 +8,7 @@ This typora theme is inspired by the [Gitbook](https://www.gitbook.com) document
 3. Launch or restart Typora and choose Gitbook Light or Gitbook Dark from the theme menu.
 
 ## Contributing
-Feel free [to submit an issue](https://github.com/Henning16/typora-gitbook-theme/issues/new), if something does not work or look right. If you would like to, you can also create your variant of this theme. 
+Feel free [to submit an issue](https://github.com/Henning16/typora-gitbook-theme/issues/new), if something does not work / look right or you have any suggestion. If you would like to, you can also create your variant of this theme. 
 
 > **Please note** that this theme is still in development. Regular updates are to expect.
 
