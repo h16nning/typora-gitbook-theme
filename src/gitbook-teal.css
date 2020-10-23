@@ -519,7 +519,7 @@ table tr td:last-child {
     height: 2rem;
     line-height: 2rem;
     margin: 0rem;
-    padding-left: 0.5rem;
+    padding-left: 0.5rem !important;
     text-align: left;
     display: block;
     font-size: 0.8rem;
@@ -531,6 +531,10 @@ table tr td:last-child {
 
 #write .code-tooltip .ty-input:focus {
     border-color: var(--primary-color);
+}
+
+.html-for-mac .ty-cm-lang-input:empty:after {
+    left: 0.5rem;
 }
 
 .autoComplt-list li, .fences-auto-suggest li {
@@ -812,6 +816,10 @@ footer.ty-footer {
     color: var(--primary-color);
 }
 
+#ty-sidebar-search-back-btn {
+    margin: auto;
+}
+
 .ty-show-outline-filter #file-library-search, .ty-show-search #file-library-search {
     height: 4rem;
 }
@@ -861,13 +869,13 @@ footer.ty-footer {
     line-height: 1rem;
 }
 
-#typora-sidebar .outline-item {
+.outline-item {
     display: flex;
     padding-top: 0px;
     padding-bottom: 0px;
 }
 
-#typora-sidebar .outline-item .outline-label {
+.outline-item .outline-label {
     display: block;
     width: 100%;
     padding-top: 0.4rem;
@@ -880,25 +888,25 @@ footer.ty-footer {
     transition-property: color;
 }
 
-#typora-sidebar .outline-item:hover {
+.outline-item:hover {
     background: none;
 }
 
-#typora-sidebar .outline-item:hover .outline-label {
+.outline-item:hover .outline-label {
     color: var(--primary-color);
 }
 
-#typora-sidebar .outline-label:hover {
+.outline-label:hover {
     text-decoration: none;
 }
 
-#typora-sidebar .outline-active.outline-label {
+.outline-active.outline-label {
     border-right: solid 2px var(--primary-color);
     font-weight: 500;
     color: var(--primary-color);
 }
 
-#typora-sidebar .outline-expander {
+.outline-expander {
     padding-top: 0.4rem;
     padding-right: 0.5rem;
 }
@@ -1401,7 +1409,7 @@ button:active, button.active,
 /*GHOST BUTTON*/
 
 .window-header button,
-#close-sidebar-menu-btn,
+#close-sidebar-menu-btn, .html-for-mac .sidebar-tab-btn,
 .label-hint, .ty-table-edit .btn {
     background-color: transparent !important;
     color: var(--light-text-color) !important;
@@ -1411,7 +1419,7 @@ button:active, button.active,
 }
 
 .window-header button:hover, .window-header button:focus,
-#close-sidebar-menu-btn:hover, #close-sidebar-menu-btn:focus,
+#close-sidebar-menu-btn:hover, #close-sidebar-menu-btn:focus, .html-for-mac .sidebar-tab-btn:hover, .html-for-mac .sidebar-tab-btn:focus,
 .label-hint:hover, .label-hint:focus, .ty-table-edit .btn:hover, .ty-table-edit .btn:focus {
     color: var(--primary-color) !important;
     background: none !important;
