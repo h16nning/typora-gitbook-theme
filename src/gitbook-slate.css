@@ -27,6 +27,7 @@
     --boxes-darker: #424b5a;
     --boxes-darker2: #485364;
     --boxes-darkest: #5b697e;
+    --drag-placeholder-color: #424b5a;
 
     --mds: #183055;
     --text-color: #E6ECF1;
@@ -192,6 +193,52 @@ h6 {
     margin-top: 1.5rem;
     margin-bottom: 0.5rem;
     opacity: 0.8;
+}
+
+#write>h1.md-focus:before, #write>h2.md-focus:before, #write>h3.md-focus:before, #write>h4.md-focus:before, #write>h5.md-focus:before, #write>h6.md-focus:before {
+    color: var(--light-text-color);
+    border: none;
+    position: absolute;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 0px;
+    line-height: 1;
+}
+
+#write>h1.md-focus:before {
+    content: "h1";
+    top: 1.25rem;
+    left: -1.75rem;
+}
+
+#write>h2.md-focus:before {
+    content: "h2";
+    top: 0.8rem;
+    left: -1.75rem;
+}
+
+#write>h3.md-focus:before {
+    content: "h3";
+    top: 0.55rem;
+    left: -1.75rem;
+}
+
+#write>h4.md-focus:before {
+    content: "h4";
+    top: 0.35rem;
+    left: -1.75rem;
+}
+
+#write>h5.md-focus:before {
+    content: "h5";
+    top: 0.2rem;
+    left: -1.75rem;
+}
+
+#write>h6.md-focus:before {
+    content: "h6";
+    top: 0.2rem;
+    left: -1.75rem;
 }
 
 h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child,
@@ -545,14 +592,14 @@ tt {
     border-radius: 0.3rem;
     color: #ffffff;
     padding: 1.5rem;
-    font-size: 0.8em;
+    font-size: 0.8rem;
 }
 
 code {
-    padding: 0.5em 1em;
+    padding: 0.25rem 0.5rem;
     background-color: var(--boxes);
-    padding: 2px 4px 0px 4px;
-    font-size: 0.9em;
+    font-size: 0.9rem;
+    border-radius: 0.2rem;
 }
 
 .md-fences .CodeMirror div.CodeMirror-cursor, .md-htmlblock-panel .CodeMirror div.CodeMirror-cursor {
@@ -655,26 +702,6 @@ code {
     border-radius: 0.3rem;
     color: var(--text-color);
     border-left: solid 4px var(--boxes-darkest);
-}
-
-#write>h3.md-focus:before {
-    left: -1.5625rem;
-    top: .375rem;
-}
-
-#write>h4.md-focus:before {
-    left: -1.5625rem;
-    top: .285714286rem;
-}
-
-#write>h5.md-focus:before {
-    left: -1.5625rem;
-    top: .285714286rem;
-}
-
-#write>h6.md-focus:before {
-    left: -1.5625rem;
-    top: .285714286rem;
 }
 
 .md-image>.md-meta {
@@ -1099,6 +1126,19 @@ code {
     background-color: var(--boxes);
     border: none;
 }
+
+.ty-quick-open-category-title {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    opacity: 1;
+    color: var(--light-text-color);
+    line-height: 32px;
+    padding-top: 6px;
+    height: 32px;
+}
+
 
 /** focus mode */
 .on-focus-mode blockquote {
