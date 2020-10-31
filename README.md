@@ -1,7 +1,9 @@
 # Gitbook Theme For Typora
-This typora theme is inspired by the [Gitbook](https://www.gitbook.com) document style. It features three variants: The standard `Azure` variant, the darker `Slate` one as well as a brand new `Teal` look.
+![img](media/gitbookthumbnail.png)
 
-> This theme has been developed and tested for Windows 10 (both Classic and Unibody style). It has not been tested on macOS nor Linux. However, the core theme should work.
+This typora theme is inspired by the [Gitbook](https://www.gitbook.com) document style. It features three variants: *Azure*, *Slate* and *Teal*.
+
+> Designed and tested on Windows 10. Not tested, but it should also work for macOS and Linux.
 ## Installation instructions
 1. Download the zipped project package [here](https://github.com/Henning16/typora-gitbook-theme/releases/latest) and un-zip it.
 2. Copy the `gitbook-azure.css`, `gitbook-slate.css` and `gitbook-teal.css` file as well as the folder `gitbook` to your Typora theme library.
