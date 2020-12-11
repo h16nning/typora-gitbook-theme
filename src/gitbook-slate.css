@@ -633,7 +633,7 @@ tt {
 
 code {
   padding: 0.25rem 0.5rem;
-  background-color: var(--boxes);
+  background-color: var(--borders);
   font-size: 0.9rem;
   border-radius: 0.2rem;
 }
@@ -864,6 +864,7 @@ input[type='checkbox']:checked:after {
 
 .info-panel-tab-border {
   color: var(--primary-color);
+  border-radius: 2px;
 }
 
 #ty-sidebar-search-back-btn {
@@ -1754,8 +1755,8 @@ select:hover {
 }
 
 .modal-content {
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px 0px;
-  border: solid 1px var(--borders);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 10px 0px;
+  border: solid 1px var(--boxes-darker);
   border-radius: 0.3rem;
 }
 
@@ -1764,7 +1765,8 @@ select:hover {
 }
 
 .modal-open .modal.fade.in {
-  background-color: rgba(2, 7, 12, 0.781);
+  background: none;
+  backdrop-filter: blur(5px);
 }
 
 /*SCROLLBAR*/
@@ -1772,15 +1774,12 @@ select:hover {
 ::-webkit-scrollbar {
   width: 9px;
   height: 8px;
-  padding: 4px;
   position: absolute;
-  background-color: var(--borders);
-  border: solid 1px var(--boxes-darker);
   border-radius: 4.5px;
 }
 
 ::-webkit-scrollbar:hover {
-  background-color: var(--borders);
+  background-color: transparent;
 }
 
 ::-webkit-scrollbar-corner {
@@ -1791,7 +1790,6 @@ select:hover {
   background: var(--boxes-darker2);
   background-clip: padding-box;
   border-radius: 4.5px;
-  margin-right: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -1877,6 +1875,13 @@ footer.ty-footer {
 
 .megamenu-opened .megamenu-menu {
   left: 0px;
+}
+
+#megamenu-content {
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
 }
 
 #megamenu-menu-list {
@@ -2022,20 +2027,21 @@ footer.ty-footer {
   border-radius: 0.3rem;
   padding: 1rem;
 
-  font-weight: 500;
+  font-weight: 700;
   font-size: 1rem;
 
-  transition-duration: 0.2s;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
 }
 
 .long-btn:hover {
-  background-color: var(--bg-color);
-  border: 1px solid var(--primary-color);
-  color: var(--primary-color) !important /*important required*/;
+  background-color: var(--primary-color);
+  color: white !important /*important required*/;
+  border: 1px solid transparent;
+  box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 6px, rgba(56, 132, 255, 0.2) 0px 0px 10px;
 }
 
 #m-import-local:hover .preference-item-hint {
-  color: var(--primary-color);
+  color: white;
   opacity: 0.7;
 }
 
@@ -2047,16 +2053,19 @@ footer.ty-footer {
 
 #theme-preview-grid {
   max-width: none;
-  padding: 1rem;
+  padding: 1.5rem;
   background-color: var(--boxes);
   border-radius: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 1.5rem;
 }
 
 .theme-preview-div {
   border: none;
   border-radius: 0.4rem;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 15px;
-  margin: 0.75rem;
+  margin: 0rem;
   transition-duration: 0.3s;
 }
 
