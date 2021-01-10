@@ -321,6 +321,8 @@ mark {
   color: white;
   padding: 0.2rem 0.4rem;
   border-radius: 0.2rem;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 /*BLOCKQUOTE*/
@@ -646,6 +648,8 @@ code {
   background-color: var(--borders);
   font-size: 0.9rem;
   border-radius: 0.2rem;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 .md-fences .CodeMirror div.CodeMirror-cursor,
@@ -1628,15 +1632,23 @@ button.active,
 #file-library-search-input {
   background-color: transparent !important;
   border-radius: 0.3rem !important;
-  border: solid 1px var(--boxes-darker2) !important;
+  border: solid 1px var(--boxes-darker) !important;
   box-shadow: none !important;
   color: var(---heading-text-color) !important;
   font-size: 0.9rem !important;
-  font-weight: 500;
+  font-weight: 400;
   padding: 0.7rem !important;
   height: 2rem;
   transition-duration: 0.2s;
-  transition-property: border;
+  transition-property: border, box-shadow;
+}
+
+.search-input:hover,
+.search:hover,
+.form-control:hover,
+#file-library-search-input:hover {
+  border: solid 1px var(--boxes-darker2) !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04) !important;
 }
 
 .search-input:focus,
@@ -1646,10 +1658,9 @@ button.active,
   background-color: transparent !important;
   border-radius: 0r3em !important;
   border-color: var(--primary-color) !important;
-  box-shadow: none !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1) !important;
   color: var(--heading-text-color) !important;
   font-size: 0.9rem !important;
-  font-weight: 500;
   padding: 0.7rem !important;
 }
 
