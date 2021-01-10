@@ -2227,3 +2227,9 @@ p[type='description'] {
   margin: 0rem;
   margin-bottom: 1rem;
 }
+
+/*kbd*/
+
+kbd {
+  font-family: var(--font-family);
+}
