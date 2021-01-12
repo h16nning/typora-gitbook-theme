@@ -399,20 +399,24 @@ table tr td:last-child {
 /*OTHER TABLE THINGS*/
 
 .ty-table-edit {
-  background-color: var(--bg-color);
+  background-color: var(--boxes);
   padding: 0.3rem;
-  border: solid 1px var(--borders);
   border-radius: 0.3rem;
-  box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+  box-shadow: none;
+  transform: translateY(2.5rem);
   transition-duration: 0.3s;
   transition-property: opacity;
+}
+
+.ty-table-edit + .md-table {
+  margin-top: 3rem;
 }
 
 .ty-table-edit:active,
 .ty-table-edit:focus,
 .popover:active,
 .popover:focus {
-  box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+  box-shadow: none;
 }
 
 .popover {
@@ -508,6 +512,10 @@ table tr td:last-child {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+.cm-error {
+  color: var(--danger-color);
+}
+
 .cm-s-inner span.cm-comment,
 .cm-s-typora-default span.cm-comment,
 .cm-s-typora-default span.cm-code {
@@ -591,7 +599,7 @@ table tr td:last-child {
   font-weight: 400;
 }
 
-#write .code-tooltip {
+.md-fences .code-tooltip {
   box-shadow: rgba(116, 129, 141, 0.08) 0px 2px 6px 0px;
   border: solid 1px var(--borders);
   border-radius: 0.3rem;
@@ -603,7 +611,7 @@ table tr td:last-child {
   padding: 0.1875rem;
 }
 
-#write .code-tooltip .ty-input {
+.md-fences .code-tooltip .ty-input {
   border: solid 1px var(--borders);
   height: 2rem;
   line-height: 2rem;
@@ -618,7 +626,7 @@ table tr td:last-child {
   transition-property: border;
 }
 
-#write .code-tooltip .ty-input:focus {
+.md-fences .code-tooltip .ty-input:focus {
   border-color: var(--primary-color);
 }
 
@@ -790,6 +798,10 @@ input[type='checkbox']:checked:after {
   border-left: solid 4px var(--boxes-darkest);
 }
 
+#write pre.md-meta-block:empty:before {
+  color: var(--light-text-color);
+}
+
 .md-image > .md-meta {
   border-radius: 3px;
   padding: 2px 0px 0px 4px;
@@ -824,64 +836,90 @@ input[type='checkbox']:checked:after {
 
 /*MATH*/
 
+.md-rawblock-container {
+  padding: 1rem;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+
+.md-rawblock:hover .md-rawblock-container {
+  background-color: var(--boxes);
+}
+
+.md-rawblock:active .md-rawblock-container {
+  background-color: var(--boxes-darker);
+}
+
 .MathJax_SVG:focus {
   outline: none;
 }
 
-.md-rawblock {
-  margin: 1.5rem 0rem;
-}
-
-.md-rawblock-container {
-  transition-duration: 0.3s;
-  transition-property: box-shadow, border;
-  padding: 8px;
-  border: solid 1px transparent;
+.md-rawblock-panel,
+.md-rawblock-control:not(.md-rawblock-tooltip) {
   border-radius: 0.3rem;
+  background-color: var(--boxes);
 }
 
-.md-rawblock:hover > .md-rawblock-container {
-  background-color: transparent;
-  border: solid 1px var(--borders);
-  box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
-}
-
-.md-math-block .md-rawblock-control:not(.md-rawblock-tooltip) {
-  background-color: var(--bg-color);
-  border-left: solid 2px var(--primary-color);
-  border-right: solid 2px var(--primary-color);
-}
-
-.md-math-block .md-rawblock-before {
-  border-top-left-radius: 0.3rem;
-  border-top-right-radius: 0.3rem;
-  border-top: solid 2px var(--primary-color);
-}
-
-.md-math-block .md-rawblock-after {
+.md-rawblock-panel .code-tooltip {
+  box-shadow: none;
   border-bottom-left-radius: 0.3rem;
   border-bottom-right-radius: 0.3rem;
-  border-bottom: solid 2px var(--primary-color);
-  margin-bottom: 0.5rem;
 }
 
-#write .md-math-block .code-tooltip {
-  width: 100%;
+.md-rawblock-panel .CodeMirror-linenumber {
+  color: var(--light-text-color);
+  opacity: 1;
 }
 
-.md-mathblock-input span.cm-tag {
-  color: #15726d;
+.md-rawblock-panel .CodeMirror div.CodeMirror-cursor {
+  border-left: solid 1px var(--text-color);
 }
 
-.md-mathblock-input span.cm-atom {
-  color: #8a1fa0;
+.md-mathblock-panel .md-mathjax-preview,
+.mathjax-candidate {
+  border-top: solid 1px var(--borders);
 }
 
-.md-mathblock-input span.cm-number {
-  color: #df4617;
+.md-rawblock-after,
+.md-rawblock-before {
+  cursor: default;
+  color: var(--light-text-color);
+  user-select: none;
+  -webkit-user-select: none;
 }
 
-.code-tooltip.md-hover-tip {
+.md-rawblock-tooltip-name {
+  font-size: 13px;
+  color: var(--light-text-color);
+  opacity: 1;
+}
+
+.md-rawblock-on-edit > .md-rawblock-tooltip {
+  padding-right: 0px;
+}
+
+.md-rawblock-input span.cm-tag {
+  color: #0bb6ad;
+}
+
+.md-rawblock-input span.cm-atom {
+  color: #b61ed4;
+}
+
+.md-rawblock-input span.cm-number {
+  color: #ec7200;
+}
+
+.md-rawblock-input span.cm-keyword {
+  color: #156db6;
+}
+
+.md-rawblock-input span.cm-bracket {
+  color: var(--light-text-color);
+}
+
+#math-inline-preview.code-tooltip {
   border-radius: 0.3rem;
   background-color: var(--bg-color);
   box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
@@ -889,21 +927,14 @@ input[type='checkbox']:checked:after {
   opacity: 1;
 }
 
-.md-hover-tip .code-tooltip-content {
+#math-inline-preview.code-tooltip .code-tooltip-content {
   border: solid 1px var(--borders);
 }
 
-.md-hover-tip .md-arrow:after {
+#math-inline-preview.code-tooltip .md-arrow:after {
   background-color: var(--bg-color);
   border: solid 1px var(--borders);
   box-shadow: none;
-}
-
-/*HTML*/
-
-.md-htmlblock-panel {
-  border: solid 2px var(--primary-color);
-  border-radius: 0.3rem;
 }
 
 /*FOOTER*/
@@ -973,6 +1004,23 @@ footer.ty-footer {
 #typora-sidebar #filesearch-case-ion-btn:hover,
 #typora-sidebar #filesearch-word-ion-btn:hover {
   color: var(--primary-color);
+}
+
+/*sidebar loading*/
+
+#typora-sidebar #sidebar-loading-template {
+  padding: 0px;
+}
+
+#typora-sidebar #sidebar-loading-template .typora-search-spinner {
+  opacity: 1;
+  color: var(--light-text-color-darker);
+}
+
+#typora-sidebar #sidebar-loading-template .typora-quick-open-info {
+  color: var(--light-text-color-darker);
+  font-size: 0.9rem;
+  font-weight: 500;
 }
 
 /*sidebar outline*/
@@ -1568,7 +1616,8 @@ button.active,
 .html-for-mac .sidebar-tab-btn,
 .label-hint,
 .ty-table-edit .btn,
-.zoom-hint-button {
+.zoom-hint-button,
+.md-rawblock-tooltip-btn {
   background-color: transparent !important;
   color: var(--light-text-color) !important;
   opacity: 1 !important;
@@ -1587,7 +1636,9 @@ button.active,
 .ty-table-edit .btn:hover,
 .ty-table-edit .btn:focus,
 .zoom-hint-button:hover,
-.zoom-hint-button:focus {
+.zoom-hint-button:focus,
+.md-rawblock-tooltip-btn:hover,
+.md-rawblock-tooltip-btn:focus {
   color: var(--primary-color) !important;
   background: none !important;
 }
@@ -1660,9 +1711,8 @@ button.active,
 .form-control:focus,
 #file-library-search-input:focus {
   background-color: transparent !important;
-  border-radius: 0r3em !important;
   border-color: var(--primary-color) !important;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04) !important;
   color: var(--heading-text-color) !important;
   font-size: 0.9rem !important;
   padding: 0.7rem !important;
@@ -2226,10 +2276,4 @@ p[type='description'] {
   color: var(--light-text-color);
   margin: 0rem;
   margin-bottom: 1rem;
-}
-
-/*kbd*/
-
-kbd {
-  font-family: var(--font-family);
 }
