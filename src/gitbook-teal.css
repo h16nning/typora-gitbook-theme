@@ -1102,14 +1102,25 @@ footer.ty-footer {
   background: var(--borders);
 }
 
-#typora-sidebar .ty-search-item-line:hover,
-#typora-sidebar .ty-search-item-line.active {
-  background-color: transparent;
+#typora-sidebar .ty-search-item-line {
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  margin-left: 24px;
+  transition-duration: 0.2s;
+}
+
+#typora-sidebar .ty-search-item .ty-search-item-line:hover {
+  background-color: var(--boxes-darker);
+}
+
+#typora-sidebar .ty-search-item.active .ty-search-item-line:hover {
+  background-color: var(--boxes);
 }
 
 #typora-sidebar .ty-search-item-line.active {
+  font-weight: 700;
+  background-color: var(--boxes-darker);
   color: var(--primary-color);
-  font-weight: 800;
 }
 
 #typora-sidebar .file-list-item-file-name {
@@ -1146,6 +1157,19 @@ footer.ty-footer {
   border-radius: 0.3rem;
   font-weight: 500;
   background-color: white !important;
+}
+
+#typora-sidebar .file-list-item-count {
+  font-size: 0.75rem;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 0.2rem;
+  min-width: 1.25rem;
+  height: 1.25rem;
+  text-align: center;
+  line-height: 1.25rem;
+  position: relative;
+  top: 0.3rem;
 }
 
 #typora-sidebar .file-list-item.file-library-file-node {
@@ -1537,25 +1561,25 @@ header .menu-style-btn:hover {
 .btn,
 button {
   border: none !important;
-  border-radius: 0.3em !important;
+  border-radius: 0.3rem !important;
   color: var(--text-color) !important;
   transition-duration: 0.2s;
   transition-property: all;
-  font-size: 0.9em !important;
+  font-size: 0.9rem !important;
   font-weight: 500;
   outline: none;
 }
 
 .btn-default {
   border: none !important;
-  border-radius: 0.3em !important;
+  border-radius: 0.3rem !important;
   background-color: var(--boxes) !important;
 }
 
 .btn:hover,
 .button-hover {
   border: none;
-  border-radius: 0.3em;
+  border-radius: 0.3rem;
   background-color: var(--borders) !important;
   color: var(--text-color);
 }
@@ -1565,7 +1589,7 @@ button.active,
 .btn:active,
 .btn-default:active {
   border: none;
-  border-radius: 0.3em;
+  border-radius: 0.3rem;
   background-color: var(--boxes-darker) !important;
   box-shadow: none;
   outline: none;
@@ -1580,7 +1604,7 @@ button.active,
 
 .btn-primary {
   border: none;
-  border-radius: 0.3em;
+  border-radius: 0.3rem;
   background-color: var(--primary-color);
   color: white !important;
 }
@@ -1593,11 +1617,11 @@ button.active,
 
 .btn.dropdown-toggle-split,
 .btn.dropdown-toggle-split:hover {
-  border-radius: 0em 0.3em 0.3em 0em !important;
+  border-radius: 0rem 0.3rem 0.3rem 0rem !important;
 }
 
 #ty-spell-check-dict-missing-primary-btn {
-  border-radius: 0.3em 0em 0em 0.3em !important;
+  border-radius: 0.3rem 0rem 0rem 0.3rem !important;
 }
 
 .open > .dropdown-toggle.btn-primary {
@@ -1732,7 +1756,10 @@ button.active,
 .md-search-hit.md-search-select,
 .md-search-select,
 .ty-file-search-match-text {
-  background: rgba(56, 132, 255, 0.3) !important;
+  background: transparent;
+  color: var(--primary-color);
+  font-weight: 700;
+  border-bottom: solid 2px var(--primary-color);
 }
 
 /*ZOOM HINT*/
