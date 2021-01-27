@@ -1,3 +1,4 @@
+
 @import 'gitbook/fonts.css';
 
 /*by H16nning*/
@@ -154,17 +155,17 @@ h6 code {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 1.9rem;
   font-weight: 700;
   line-height: 1.5;
   margin-top: 3rem;
   margin-bottom: 0.8rem;
   padding-bottom: 0.2rem;
-  border-bottom: solid 2px var(--borders);
+  border-bottom: solid 1px var(--borders);
 }
 
 h2 {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.5;
   margin-top: 2.5rem;
@@ -357,6 +358,10 @@ table tr {
 
 table tr.md-end-block {
   border-top: none;
+}
+
+table tbody tr:last-child {
+  border-bottom: none;
 }
 
 table tr th {
@@ -820,14 +825,24 @@ input[type='checkbox']:checked:after {
   border: none;
 }
 
-.md-toc-tooltip .btn {
-  padding: 0.5rem;
-  line-height: 1rem;
+#write div.md-toc-tooltip {
+  background-color: var(--boxes);
+  line-height: 1.6rem;
+  padding: 0.3rem 0.75rem;
+  border-top: none;
+  border-radius: 0.3rem;
 }
 
-.md-toc-tooltip .btn:hover {
-  color: var(--primary-color) !important /*required*/;
-  background-color: var(--boxes) !important /*required*/;
+.md-toc.md-focus {
+  margin-top: 4.5rem;
+}
+
+#write div.md-toc-tooltip + .md-toc-content{
+  padding-top: 1rem;
+}
+
+.md-delete-toc {
+  padding: 0px;
 }
 
 /*MATH*/
@@ -985,8 +1000,9 @@ footer.ty-footer {
   margin-top: 8px !important;
 }
 
-.ty-sidebar-search-panel .searchpanel-search-option-btn {
-  top: 14px;
+.ty-sidebar-search-panel .searchpanel-search-option-btn,
+#ty-sidebar-search-tabs .searchpanel-search-option-btn {
+  top: 15px;
 }
 
 #typora-sidebar #filesearch-case-ion-btn,
@@ -1138,6 +1154,7 @@ footer.ty-footer {
 
 #typora-sidebar .file-list-item-parent-loc,
 #typora-sidebar .file-list-item-time {
+  font-family: var(--font-family);
   font-weight: 400;
   opacity: 0.5;
   display: block;
@@ -1267,9 +1284,13 @@ footer.ty-footer {
   transition-property: background-color, color;
 }
 
-#typora-sidebar #ty-sidebar-footer li:hover {
+#typora-sidebar #ty-sidebar-footer li:not(.file-sort-item):not(:first-child):hover {
   color: var(--primary-color);
   background-color: var(--boxes);
+}
+
+#typora-sidebar #ty-sidebar-footer .file-action-item.file-sort-item > span:first-of-type {
+  line-height: 2rem;
 }
 
 /*cursor*/
@@ -1302,7 +1323,8 @@ footer.ty-footer {
   border: 1px solid var(--borders);
   border-radius: 0.3rem;
   padding: 0rem;
-  box-shadow: rgba(116, 129, 141, 0.1) 0px 3px 8px 0px;
+  box-shadow: rgba(116, 129, 141, 0.15) 0px 3px 16px 0px;
+  overflow: hidden;
 }
 
 #typora-quick-open-input {
@@ -1637,7 +1659,8 @@ button.active,
 .label-hint,
 .ty-table-edit .btn,
 .zoom-hint-button,
-.md-rawblock-tooltip-btn {
+.md-rawblock-tooltip-btn,
+.md-delete-toc {
   background-color: transparent !important;
   color: var(--light-text-color) !important;
   opacity: 1 !important;
@@ -1658,7 +1681,9 @@ button.active,
 .zoom-hint-button:hover,
 .zoom-hint-button:focus,
 .md-rawblock-tooltip-btn:hover,
-.md-rawblock-tooltip-btn:focus {
+.md-rawblock-tooltip-btn:focus,
+.md-delete-toc:hover,
+.md-delete-toc:focus {
   color: var(--primary-color) !important;
   background: none !important;
 }
