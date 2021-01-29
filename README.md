@@ -24,8 +24,6 @@ Feel free [to submit an issue](https://github.com/Henning16/typora-gitbook-theme
 
 ![](media/mathblocks.png)
 
-![](media/menus.png)
-
 ## Older Screenshots
 
 These screenshots are not fully up to date but they show the slate and teal variants and some Windows specific views.
