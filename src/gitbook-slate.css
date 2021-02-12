@@ -1,44 +1,42 @@
 @import 'gitbook/fonts.css';
 
-/*by H16nning*/
+/*by 16soundsofsilence, yes this code is an absolute mess*/
 
 :root {
-  --bg-color: #242932;
-  --side-bar-bg-color: #29303c;
+  --bg-color: hsl(217, 18%, 9%);
+  --side-bar-bg-color: hsl(217, 17%, 13%);
   --control-text-color: #e6ecf1;
-  --primary-color: rgb(56, 132, 255);
+  --primary-color: hsl(217, 100%, 61%);
   --primary-btn-border-color: #3884ff;
-  --active-file-bg-color: #5d6574;
+  --active-file-bg-color: hsl(217, 17%, 13%);
   --active-file-text-color: inherit;
   --active-file-border-color: #3884ff;
   --item-hover-text-color: #8092af;
-  --item-hover-bg-color: #29303c;
-  --window-border: 1px solid #5d6574;
-  --select-text-font-color: #e6ecf1;
+  --item-hover-bg-color: hsl(217, 16%, 13%);
+  --window-border: 1px solid hsl(217, 15%, 18%);
+  --select-text-font-color: hsl(217, 11%, 91%);
   --select-text-bg-color: #3277e5;
 
   --md-char-color: #8092af;
   --heading-char-color: #8092af;
   --meta-content-color: #3783ff;
 
-  --borders: #353c49;
-  --table-border-color: #353c49;
-  --boxes: #29303c;
-  --boxes-darker: #424b5a;
-  --boxes-darker2: #485364;
-  --boxes-darkest: #5b697e;
-  --drag-placeholder-color: #424b5a;
+  --borders: hsl(217, 15%, 18%);
+  --table-border-color: hsl(217, 15%, 18%);
+  --boxes: hsl(217, 17%, 13%);
+  --boxes-darker: hsl(217, 14%, 24%);
+  --boxes-darker2: hsl(217, 13%, 28%);
+  --boxes-darkest: hsl(217, 12%, 35%);
+  --drag-placeholder-color: hsl(217, 13%, 28%);
 
-  --text-color: #e6ecf1;
+  --text-color: hsl(217, 11%, 91%);
   --heading-text-color: white;
-  --light-text-color: #5b697e;
-  --light-text-color-brighter: #768292;
+  --light-text-color: #8a92a3;
+  --light-text-color-brighter: #9aa2b1;
   --codeboxes: #183055;
   --codeboxes-lighter: #1c375f;
   --rawblock-edit-panel-bd: transparent;
 
-  --primary-color-white: #5272a7;
-  --primary-color-white-darker: #5a83c5;
   --primary-color-darker: #1f65d6;
   --focus-ring-color: #3783ff;
 
@@ -413,13 +411,13 @@ table tr td:last-child {
 }
 
 .ty-table-edit:active,
-.ty-table-edit:focus,
-.popover:active,
-.popover:focus {
+.ty-table-edit:focus {
   box-shadow: none;
 }
 
-.popover {
+.popover,
+.popover:active,
+.popover:focus {
   border: solid 1px var(--borders);
   box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 8px 0px;
   border-radius: 0.3rem;
@@ -429,18 +427,40 @@ table tr td:last-child {
   border-bottom-color: var(--borders);
 }
 
+.md-grid-board a {
+  background-color: transparent;
+  border-color: var(--borders);
+  border-radius: 2px;
+}
+
 .md-grid-board .md-grid-ext {
-  background-color: var(--boxes);
+  background-color: var(--borders);
+  border-radius: 2px;
 }
 
 .md-grid-board tr[row='1'] .md-grid-ext {
-  background-color: var(--boxes-darkest);
+  background: none;
+  border-radius: 6px;
 }
 
-.md-grid-board a.md-active,
-.md-grid-board a:hover {
-  background-color: var(--primary-color-white);
-  border-color: var(--primary-color-white-darker);
+.md-grid-board tr[row='1'] .md-grid-ext a {
+  background-color: var(--boxes-darker2);
+  border-color: var(--boxes-darker2);
+}
+
+.md-grid-board tr[row='1'] td {
+  background-color: var(--bg-color);
+  border-color: var(--borders);
+}
+
+.md-grid-board a.md-active, .md-grid-board a:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.md-grid-board tr[row='1'] a.md-active, .md-grid-board tr[row='1'] a:hover {
+  background-color: var(--primary-color-darker);
+  border-color: var(--primary-color-darker);
 }
 
 #md-grid-width,
@@ -903,6 +923,22 @@ input[type='checkbox']:checked:after {
   padding-right: 0px;
 }
 
+.md-rawblock-input span.cm-tag {
+  color: #0bb6ad;
+}
+
+.md-rawblock-input span.cm-atom, .md-inline-math script {
+  color: #b61ed4;
+}
+
+.md-rawblock-input span.cm-number {
+  color: #ec7200;
+}
+
+.md-rawblock-input span.cm-keyword {
+  color: #156db6;
+}
+
 .md-mathblock-input span.cm-bracket {
   color: var(--light-text-color);
 }
@@ -950,6 +986,11 @@ input[type='checkbox']:checked:after {
 
 .info-panel-tab {
   opacity: 1;
+}
+
+.sidebar-tab {
+  font-weight: 500;
+  color: var(--light-text-color);
 }
 
 .info-panel-tab-border {
@@ -1093,20 +1134,22 @@ input[type='checkbox']:checked:after {
 }
 
 #typora-sidebar .ty-search-item-line {
-  padding: 0.5rem;
-  border-radius: 0.2rem;
+  font-family: var(--font-family);
+  font-size: 0.8rem;
+  font-weight: 400;
+  padding: 0.3rem;
+  border-radius: 0.3rem;
   margin-left: 24px;
   transition-duration: 0.2s;
 }
 
-#typora-sidebar .ty-search-item .ty-search-item-line:hover,
-#typora-sidebar .ty-search-item.active .ty-search-item-line:hover {
-  background-color: var(--boxes-darker);
+#typora-sidebar .ty-search-item-line * {
+  opacity: 1;
 }
 
+#typora-sidebar .ty-search-item .ty-search-item-line:hover,
 #typora-sidebar .ty-search-item-line.active {
-  font-weight: 700;
-  background-color: var(--boxes-darker);
+  background-color: transparent;
   color: var(--primary-color);
 }
 
@@ -1189,6 +1232,7 @@ input[type='checkbox']:checked:after {
   line-height: 2.2rem;
   height: 2.2rem;
   background: none;
+  margin-bottom: 0px;
 }
 
 #typora-sidebar .file-tree-node .file-node-background {
@@ -1636,7 +1680,9 @@ button.active,
 .ty-table-edit .btn,
 .zoom-hint-button,
 .md-rawblock-tooltip-btn,
-.md-delete-toc {
+.md-delete-toc,
+#md-searchpanel .input-group-addon.btn,
+#pin-outline-btn {
   background-color: transparent !important;
   color: var(--light-text-color) !important;
   opacity: 1 !important;
@@ -1659,7 +1705,10 @@ button.active,
 .md-rawblock-tooltip-btn:hover,
 .md-rawblock-tooltip-btn:focus,
 .md-delete-toc:hover,
-.md-delete-toc:focus {
+.md-delete-toc:focus,
+#md-searchpanel .input-group-addon.btn:hover,
+#md-searchpanel .input-group-addon.btn:focus,
+#pin-outline-btn:hover, #pin-outline-btn:focus {
   color: var(--primary-color) !important;
   background: none !important;
 }
@@ -1750,10 +1799,10 @@ button.active,
 .md-search-hit.md-search-select,
 .md-search-select,
 .ty-file-search-match-text {
-  background: transparent;
-  color: var(--primary-color);
-  font-weight: 700;
-  border-bottom: solid 2px var(--primary-color);
+  background-color: var(--boxes-darkest);
+  color: white;
+  padding: 0.2rem 0.1rem;
+  border-radius: 0.2rem;
 }
 
 /*ZOOM HINT*/
@@ -1778,8 +1827,16 @@ button.active,
   max-height: 46px;
 }
 
+.mac-seamless-mode #md-searchpanel {
+  max-height: 70px;
+}
+
 #md-searchpanel.searchpanel-replace-mode {
   max-height: 84px;
+}
+
+.mac-seamless-mode #md-searchpanel.searchpanel-replace-mode {
+  max-height: 108px;
 }
 
 #md-searchpanel input {
@@ -1913,36 +1970,6 @@ select:hover {
   -webkit-backdrop-filter: blur(5px);
 }
 
-/*SCROLLBAR*/
-
-::-webkit-scrollbar {
-  width: 9px;
-  height: 8px;
-  position: absolute;
-  border-radius: 4.5px;
-}
-
-::-webkit-scrollbar:hover {
-  background-color: transparent;
-}
-
-::-webkit-scrollbar-corner {
-  background: 0 0;
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--boxes-darker2);
-  background-clip: padding-box;
-  border-radius: 4.5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--boxes-darkest);
-}
-
-::-webkit-scrollbar-thumb:active {
-  background: var(--boxes-darkest);
-}
 
 /*LANGS*/
 
