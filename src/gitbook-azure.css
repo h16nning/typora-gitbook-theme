@@ -6,20 +6,20 @@
   --bg-color: white;
   --side-bar-bg-color: #f5f7f9;
   --control-text-color: #3b454e;
-  --primary-color: rgb(56, 132, 255);
-  --primary-btn-border-color: rgb(56, 132, 255);
+  --primary-color: #3884ff;
+  --primary-btn-border-color: #3884ff;
   --active-file-bg-color: #e6ecf1;
   --active-file-text-color: inherit;
-  --active-file-border-color: rgb(56, 132, 255);
+  --active-file-border-color: #3884ff;
   --item-hover-text-color: #242a31;
   --item-hover-bg-color: #f5f7f9;
   --window-border: 1px solid #e6ecf1;
   --select-text-font-color: white;
-  --select-text-bg-color: #3277e5;
+  --select-text-bg-color: #1968e6;
 
   --md-char-color: #9daab6;
   --heading-char-color: #9daab6;
-  --meta-content-color: rgb(56, 132, 255);
+  --meta-content-color: #3884ff;
 
   --borders: #e6ecf1;
   --table-border-color: #e6ecf1;
@@ -37,8 +37,10 @@
   --codeboxes-lighter: #1c375f;
   --rawblock-edit-panel-bd: transparent;
 
-  --primary-color-darker: #2f6dd1;
-  --focus-ring-color: rgb(56, 132, 255);
+  --primary-color-darkest: #001f50;
+  --primary-color-darker2: #00307c;
+  --primary-color-darker: #1968e6;
+  --focus-ring-color: #3884ff;
 
   --danger-color: rgb(255, 70, 66);
 
@@ -99,6 +101,14 @@ a {
 
 a:hover {
   color: var(--primary-color-darker);
+}
+
+mark a, mark .md-content.md-url {
+  color: var(--primary-color-darker2);
+}
+
+mark a:hover {
+  color: var(--primary-color-darkest);
 }
 
 .ty-preferences a {

@@ -6,30 +6,30 @@
   --bg-color: hsl(217, 18%, 9%);
   --side-bar-bg-color: hsl(217, 17%, 13%);
   --control-text-color: #e6ecf1;
-  --primary-color: hsl(217, 100%, 61%);
+  --primary-color: #3884ff;
   --primary-btn-border-color: #3884ff;
   --active-file-bg-color: hsl(217, 17%, 13%);
   --active-file-text-color: inherit;
   --active-file-border-color: #3884ff;
   --item-hover-text-color: #8092af;
-  --item-hover-bg-color: hsl(217, 16%, 13%);
-  --window-border: 1px solid hsl(217, 15%, 18%);
-  --select-text-font-color: hsl(217, 11%, 91%);
-  --select-text-bg-color: #3277e5;
+  --item-hover-bg-color: #1c2026;
+  --window-border: 1px solid #272c35;
+  --select-text-font-color: #e6e7eb;
+  --select-text-bg-color: #1968e6;
 
   --md-char-color: #8092af;
   --heading-char-color: #8092af;
   --meta-content-color: #3783ff;
 
-  --borders: hsl(217, 15%, 18%);
-  --table-border-color: hsl(217, 15%, 18%);
-  --boxes: hsl(217, 17%, 13%);
-  --boxes-darker: hsl(217, 14%, 24%);
-  --boxes-darker2: hsl(217, 13%, 28%);
-  --boxes-darkest: hsl(217, 12%, 35%);
-  --drag-placeholder-color: hsl(217, 13%, 28%);
+  --borders: #272c35;
+  --table-border-color: #272c35;
+  --boxes: #1c2027;
+  --boxes-darker: #353b46;
+  --boxes-darker2: #3e4551;
+  --boxes-darkest: #4f5764;
+  --drag-placeholder-color: #3e4551;
 
-  --text-color: hsl(217, 11%, 91%);
+  --text-color: #e6e7eb;
   --heading-text-color: white;
   --light-text-color: #8a92a3;
   --light-text-color-brighter: #9aa2b1;
@@ -37,7 +37,9 @@
   --codeboxes-lighter: #1c375f;
   --rawblock-edit-panel-bd: transparent;
 
-  --primary-color-darker: #1f65d6;
+  --primary-color-darkest: #001f50;
+  --primary-color-darker2: #00307c;
+  --primary-color-darker: #1968e6;
   --focus-ring-color: #3783ff;
 
   --danger-color: rgb(255, 70, 66);
@@ -95,6 +97,14 @@ a {
 
 a:hover {
   color: var(--primary-color-darker);
+}
+
+mark a, mark .md-content.md-url {
+  color: var(--primary-color-darker2);
+}
+
+mark a:hover {
+  color: var(--primary-color-darkest);
 }
 
 .ty-preferences a {
