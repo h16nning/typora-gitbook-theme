@@ -1,5 +1,5 @@
 # Gitbook Theme For Typora
-![img](media/gitbookthumbnail.png)
+![img](media/variants.png)
 
 This typora theme is inspired by the [Gitbook](https://www.gitbook.com) document style. It features three variants: *Azure*, *Slate* and *Teal*.
 
@@ -18,6 +18,8 @@ Feel free [to submit an issue](https://github.com/Henning16/typora-gitbook-theme
 If you prefer the colors of the slate variant used previous to version 1.9 (these were slightly lighter and more slate-like), you can open the file `gitbook-slate.css` and change the second line from `@import "gitbook/slate-colors.css";` to `@import "gitbook/old-slate-colors.css";`. After that you have to save the file and restart Typora for the colors to update properly. Sometimes it may also be necessary to switch to a different theme and then back to the Gitbook Slate theme after changing this.
 
 ## Details
+
+![img](media/gitbookthumbnail.png)
 
 ![](media/tables.png)
 
