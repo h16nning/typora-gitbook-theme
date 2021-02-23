@@ -209,11 +209,10 @@ h5 {
 
 h6 {
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 1.5;
   margin-top: 1.3rem;
   margin-bottom: 0.5rem;
-  opacity: 0.75;
 }
 
 #write > h1.md-focus:before,
