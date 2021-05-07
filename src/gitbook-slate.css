@@ -1,5 +1,5 @@
 @import 'gitbook/fonts.css';
-@import "gitbook/slate-colors.css";
+@import 'gitbook/slate-colors.css';
 
 /*by 16soundsofsilence, yes this code is an absolute mess*/
 
@@ -44,7 +44,8 @@ a:hover {
   color: var(--primary-color-darker);
 }
 
-mark a, mark .md-content.md-url {
+mark a,
+mark .md-content.md-url {
   color: var(--primary-color-darker2);
 }
 
@@ -165,8 +166,8 @@ h6 {
   color: var(--light-text-color);
   border: none;
   position: absolute;
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 0.9rem;
+  font-weight: 500;
   padding: 0px;
   line-height: 1;
 }
@@ -179,13 +180,13 @@ h6 {
 
 #write > h2.md-focus:before {
   content: 'h2';
-  top: 0.6rem;
+  top: 0.73rem;
   left: -1.75rem;
 }
 
 #write > h3.md-focus:before {
   content: 'h3';
-  top: 0.4rem;
+  top: 0.45rem;
   left: -1.75rem;
 }
 
@@ -236,7 +237,7 @@ li > ul {
 }
 
 hr {
-  height: 2px;
+  height: 1px;
   padding: 0;
   margin: 16px 0;
   background-color: var(--borders);
@@ -407,12 +408,14 @@ table tr td:last-child {
   border-color: var(--borders);
 }
 
-.md-grid-board a.md-active, .md-grid-board a:hover {
+.md-grid-board a.md-active,
+.md-grid-board a:hover {
   background-color: var(--primary-color);
   border-color: var(--primary-color);
 }
 
-.md-grid-board tr[row='1'] a.md-active, .md-grid-board tr[row='1'] a:hover {
+.md-grid-board tr[row='1'] a.md-active,
+.md-grid-board tr[row='1'] a:hover {
   background-color: var(--primary-color-darker);
   border-color: var(--primary-color-darker);
 }
@@ -804,7 +807,7 @@ input[type='checkbox']:checked:after {
   margin-top: 4.5rem;
 }
 
-#write div.md-toc-tooltip + .md-toc-content{
+#write div.md-toc-tooltip + .md-toc-content {
   padding-top: 1rem;
 }
 
@@ -881,7 +884,8 @@ input[type='checkbox']:checked:after {
   color: #0bb6ad;
 }
 
-.md-rawblock-input span.cm-atom, .md-inline-math script {
+.md-rawblock-input span.cm-atom,
+.md-inline-math script {
   color: #b61ed4;
 }
 
@@ -1491,6 +1495,34 @@ input[type='checkbox']:checked:after {
 .header-close .icon {
   border: none !important;
 }
+
+/*preferences export*/
+
+.export-detail {
+  background-color: transparent !important /*required*/;
+}
+
+.export-items-list .separator {
+  margin: 0.4rem;
+  border-top: 1px solid var(--borders);
+}
+
+.export-items-list-control {
+  background-color: var(--boxes) !important /*required*/;
+}
+
+.export-item {
+  padding: 0.4rem !important /*required*/;
+  color: var(--light-text-color-darker);
+  font-weight: 500;
+}
+
+.export-item.active {
+  background-color: transparent !important /*required*/;
+  color: var(--primary-color);
+  font-weight: 500 !important /*required*/;
+}
+
 /*DROPDOWN*/
 
 .dropdown-menu:not(.megamenu-menu-list),
@@ -1501,7 +1533,8 @@ input[type='checkbox']:checked:after {
   user-select: none;
 }
 
-.dropdown-menu > li > a {
+.dropdown-menu > li > a,
+.auto-suggest-container li {
   font-weight: 500;
   font-size: 0.8rem;
   transition-duration: 0.2s;
@@ -1511,6 +1544,8 @@ input[type='checkbox']:checked:after {
 .dropdown-menu > .active > a,
 .dropdown-menu > li > a:hover,
 .menu-style-btn.active,
+.auto-suggest-container li:hover,
+.auto-suggest-container li.active,
 .context-menu.dropdown-menu > .active > a,
 .context-menu.dropdown-menu > li > a:hover {
   color: var(--primary-color);
@@ -1636,7 +1671,8 @@ button.active,
 .md-rawblock-tooltip-btn,
 .md-delete-toc,
 #md-searchpanel .input-group-addon.btn,
-#pin-outline-btn {
+#pin-outline-btn,
+.icon-button {
   background-color: transparent !important;
   color: var(--light-text-color) !important;
   opacity: 1 !important;
@@ -1662,7 +1698,10 @@ button.active,
 .md-delete-toc:focus,
 #md-searchpanel .input-group-addon.btn:hover,
 #md-searchpanel .input-group-addon.btn:focus,
-#pin-outline-btn:hover, #pin-outline-btn:focus {
+#pin-outline-btn:hover,
+#pin-outline-btn:focus,
+.icon-button:hover,
+.icon-button:focus {
   color: var(--primary-color) !important;
   background: none !important;
 }
@@ -1923,7 +1962,6 @@ select:hover {
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 }
-
 
 /*LANGS*/
 
@@ -2286,8 +2324,8 @@ p[type='description'] {
   margin-bottom: 1rem;
 }
 
- /*kbd*/
+/*kbd*/
 
- kbd {
+kbd {
   font-family: var(--font-family);
 }
