@@ -77,6 +77,7 @@ body {
   font-size: 0.95rem;
   max-width: 850px;
   margin: 0 auto;
+  margin-top: 1rem;
   padding: 30px;
   padding-bottom: 100px;
   position: static;
@@ -163,33 +164,33 @@ h6 code {
 }
 
 h1 {
-  font-size: 1.9rem;
+  font-size: 2.2rem;
   font-weight: 700;
   line-height: 1.5;
   margin-top: 3rem;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.5rem;
   padding-bottom: 0.2rem;
   border-bottom: solid 1px var(--borders);
 }
 
 h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.5;
-  margin-top: 2.5rem;
-  margin-bottom: 0.5rem;
-}
-
-h3 {
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   font-weight: 700;
   line-height: 1.5;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
 }
 
+h3 {
+  font-size: 1.375rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
 h4 {
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-weight: 700;
   line-height: 1.5;
   margin-top: 1.5rem;
@@ -197,19 +198,55 @@ h4 {
 }
 
 h5 {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 700;
   line-height: 1.5;
-  margin-top: 1.3rem;
+  margin-top: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
 h6 {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 400;
   line-height: 1.5;
-  margin-top: 1.3rem;
+  margin-top: 1.5rem;
   margin-bottom: 0.5rem;
+}
+
+#write > h1.md-focus:before {
+  content: 'h1';
+  top: 1.15rem;
+  left: -1.75rem;
+}
+
+#write > h2.md-focus:before {
+  content: 'h2';
+  top: 0.75rem;
+  left: -1.75rem;
+}
+
+#write > h3.md-focus:before {
+  content: 'h3';
+  top: 0.575rem;
+  left: -1.75rem;
+}
+
+#write > h4.md-focus:before {
+  content: 'h4';
+  top: 0.4rem;
+  left: -1.75rem;
+}
+
+#write > h5.md-focus:before {
+  content: 'h5';
+  top: 0.25rem;
+  left: -1.75rem;
+}
+
+#write > h6.md-focus:before {
+  content: 'h6';
+  top: 0.25rem;
+  left: -1.75rem;
 }
 
 #write > h1.md-focus:before,
@@ -969,7 +1006,7 @@ footer.ty-footer {
 }
 
 .sidebar-tab {
-  font-weight: 500;
+  text-transform: capitalize;
   color: var(--light-text-color);
 }
 
@@ -1092,6 +1129,21 @@ footer.ty-footer {
 .outline-expander {
   padding-top: 0.4rem;
   padding-right: 0.5rem;
+}
+
+#toc-dropmenu .outline-label {
+  line-height: 1rem;
+}
+
+#toc .outline-title {
+  margin-top: 9px;
+  font-size: 1rem;
+  font-weight: 500;
+  user-select: none;
+}
+
+#pin-outline-btn {
+  padding: 14px 18px 0px 0px;
 }
 
 /*sidebar file-list and search results*/
@@ -1279,7 +1331,9 @@ footer.ty-footer {
   transition-property: background-color, color;
 }
 
-#typora-sidebar #ty-sidebar-footer li:not(.file-sort-item):not(:first-child):hover {
+#typora-sidebar
+  #ty-sidebar-footer
+  li:not(.file-sort-item):not(:first-child):not(.empty-menu-group):not(.folder-menu-group):hover {
   color: var(--primary-color);
   background-color: var(--boxes);
 }
@@ -1349,6 +1403,16 @@ footer.ty-footer {
 .typora-quick-open-item.active {
   background-color: var(--boxes);
   border: none;
+}
+
+.typora-quick-open-item-path {
+  opacity: 1;
+  color: var(--light-text-color);
+}
+
+.typora-quick-open-item:hover .typora-quick-open-item-path {
+  opacity: 0.7;
+  color: var(--primary-color);
 }
 
 .ty-quick-open-category-title {
@@ -1536,6 +1600,7 @@ footer.ty-footer {
   padding: 0.4rem !important /*required*/;
   color: var(--light-text-color-darker);
   font-weight: 500;
+  cursor: pointer;
 }
 
 .export-item.active {
@@ -1601,6 +1666,7 @@ header .menu-style-btn:hover {
 
 .dropdown-menu .divider {
   border-color: var(--borders);
+  opacity: 1;
 }
 
 /*BUTTON*/
@@ -1909,40 +1975,83 @@ button.active,
   box-shadow: none;
 }
 
-/*NUMBER-INPUT*/
-input[type='number'] {
-  background-color: var(--boxes) !important;
-  border: none !important;
-  border-radius: 0.3rem;
-}
+/*SELECT*/
+/*TEXT INPUT*/
+/*NUMBER INPUT*/
 
-input[type='number']:focus {
-  background-color: var(--item-hover-bg-color) !important;
-}
-
-/*SELECTS*/
-
-select {
+html select,
+html input[type='text'],
+html input[type='number'] {
   background-color: var(--bg-color) !important;
   border-radius: 0.3rem !important;
-  border: solid 1px var(--boxes-darker2) !important;
+  border: solid 1px var(--boxes-darker) !important;
   box-shadow: none !important;
-  color: var(---heading-text-color) !important;
+  color: var(--text-color) !important;
   font-size: 0.9rem !important;
   font-weight: 500 !important;
   padding: 0.3rem !important;
-  height: 2.1rem;
+  height: 2.1rem !important;
   transition-duration: 0.2s;
   transition-property: border;
+  cursor: text;
 }
 
-select:hover {
+select {
+  cursor: pointer !important;
+}
+
+input[type='text'],
+input[type='number'] {
+  cursor: text;
+}
+
+html select:hover,
+html input[type='text']:hover,
+html input[type='number']:hover {
   background-color: var(--bg-color) !important;
-  border-radius: 0r3em !important;
-  border-color: var(--primary-color) !important;
-  box-shadow: none !important;
-  color: var(--heading-text-color) !important;
+  border-radius: 0.3rem !important;
+  border-color: var(--boxes-darker2) !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04) !important;
+  color: var(--text-color) !important;
   font-size: 0.9rem !important;
+}
+
+html select:focus,
+html input[type='text']:focus,
+html input[type='number']:focus {
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04) !important;
+}
+
+input[type='text']::placeholder,
+input[type='number']::placeholder {
+  color: var(--light-text-color-brighter) !important;
+}
+
+input[disabled],
+input[disabled]:hover,
+input[disabled]:focus {
+  cursor: not-allowed;
+}
+
+/*TEXTAREA*/
+
+textarea {
+  background-color: transparent;
+  border: solid 1px var(--boxes-darker);
+  border-radius: 0.3rem;
+  transition-duration: 0.2s;
+}
+
+textarea:hover {
+  border-color: var(--boxes-darker2);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+textarea:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  outline: none;
 }
 
 /*MODAL*/
@@ -2333,8 +2442,6 @@ a[type='page-link']:hover {
 
 p[type='description'] {
   color: var(--light-text-color);
-  margin: 0rem;
-  margin-bottom: 1rem;
 }
 
 /*kbd*/
