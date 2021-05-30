@@ -6,8 +6,8 @@ This typora theme is inspired by the [Gitbook](https://www.gitbook.com) document
 > Designed and tested on Windows 10 and macOS. Not tested, but it should also work for Linux.
 ## Installation instructions
 1. Download the zipped project package [here](https://github.com/Henning16/typora-gitbook-theme/releases/latest) and un-zip it.
-2. Copy the `gitbook-azure.css`, `gitbook-slate.css` and `gitbook-teal.css` file as well as the folder `gitbook` to your Typora theme library.
-3. Launch or restart Typora and choose *Gitbook Azure*, *Gitbook Slate*, *Gitbook Teal* from the theme menu.
+2. Copy the `gitbook-azure.css`, `gitbook-slate.css` and `gitbook-teal.css` file as well as the folder named `gitbook` to your Typora theme library. **It is important that you put this folder in there too as it contains important files and fonts, which are required for the theme to work properly.**
+4. Launch or restart Typora and choose *Gitbook Azure*, *Gitbook Slate*, *Gitbook Teal* from the theme menu.
 
 ## Contributing
 Feel free [to submit an issue](https://github.com/Henning16/typora-gitbook-theme/issues/new), if something does not work / look right or you have any suggestions. If you would like to, you can also create your own variations of this theme. 
