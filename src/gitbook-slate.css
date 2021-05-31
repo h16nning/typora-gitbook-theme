@@ -439,7 +439,7 @@ table tr td:last-child {
 
 .CodeMirror {
     padding: 1rem;
-    font-family: "Source Code Pro", monospace;
+    font-family: var(--code-font-family);
 }
 
 .cm-s-inner .CodeMirror-gutters {
