@@ -17,7 +17,7 @@ Feel free [to submit an issue](https://github.com/Henning16/typora-gitbook-theme
 ## Modfications
 If you prefer the colors of the slate variant used previous to version 1.9 (these were slightly lighter and more slate-like), you can open the file `gitbook-slate.css` and change the second line from `@import "gitbook/slate-colors.css";` to `@import "gitbook/old-slate-colors.css";`. After that you have to save the file and restart Typora for the colors to update properly. Sometimes it may also be necessary to switch to a different theme and then back to the Gitbook Slate theme after changing this.
 
-You can also put these modifications into a seperate css file [as @chen-standford points out here](https://github.com/16soundsofsilence/typora-gitbook-theme/issues/14#issuecomment-784175419).
+You can also put these modifications into a seperate css file [as chchen-standford points out here](https://github.com/16soundsofsilence/typora-gitbook-theme/issues/14#issuecomment-784175419).
 
 ## Details
 
