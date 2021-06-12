@@ -498,7 +498,7 @@ table tr td:last-child {
 
 .CodeMirror {
     padding: 1rem;
-    font-family: "Source Code Pro", monospace;
+    font-family: var(--code-font-family);
 }
 
 .cm-s-inner .CodeMirror-gutters {
@@ -1157,9 +1157,13 @@ footer.ty-footer {
 #typora-sidebar .file-list-item,
 .ty-search-item {
     border: none;
+    padding: 1rem;
+}
+
+body:not(.os-windows) #typora-sidebar .file-list-item,
+body:not(.os-windows) .ty-search-item {
     transition-duration: 0.3s !important;
     transition-property: background-color, border, color, height !important;
-    padding: 1rem;
 }
 
 #typora-sidebar .file-list-item:hover,
@@ -1174,6 +1178,9 @@ footer.ty-footer {
     padding: 0.3rem;
     border-radius: 0.3rem;
     margin-left: 24px;
+}
+
+body:not(.os-windows) #typora-sidebar .ty-search-item-line {
     transition-duration: 0.2s;
 }
 
@@ -1352,7 +1359,8 @@ footer.ty-footer {
     cursor: pointer;
 }
 
-.file-tree-node:not(.file-node-root):not(.file-node-expanded)
+body:not(.os-windows)
+    .file-tree-node:not(.file-node-root):not(.file-node-expanded)
     .file-node-background {
     transition-duration: 0.2s;
     transition-property: background-color;
