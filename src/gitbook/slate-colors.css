@@ -1,57 +1,57 @@
-/*by 16soundsofsilence*/
+/*by h16nning*/
 
 :root {
-  --bg-color: hsl(217, 18%, 9%);
-  --side-bar-bg-color: hsl(217, 17%, 13%);
-  --control-text-color: #e6ecf1;
-  --primary-color: #3884ff;
-  --primary-btn-border-color: #3884ff;
-  --active-file-bg-color: hsl(217, 17%, 13%);
-  --active-file-text-color: inherit;
-  --active-file-border-color: #3884ff;
-  --item-hover-text-color: #8092af;
-  --item-hover-bg-color: #1c2026;
-  --window-border: 1px solid #272c35;
-  --select-text-font-color: #e6e7eb;
-  --select-text-bg-color: #1968e6;
+    --bg-color: hsl(217, 18%, 9%);
+    --side-bar-bg-color: hsl(217, 17%, 13%);
+    --control-text-color: #e6ecf1;
+    --primary-color: #3884ff;
+    --primary-btn-border-color: #3884ff;
+    --active-file-bg-color: hsl(217, 17%, 13%);
+    --active-file-text-color: inherit;
+    --active-file-border-color: #3884ff;
+    --item-hover-text-color: #8092af;
+    --item-hover-bg-color: #1c2026;
+    --window-border: 1px solid #272c35;
+    --select-text-font-color: #e6e7eb;
+    --select-text-bg-color: #1968e6;
 
-  --md-char-color: #8092af;
-  --heading-char-color: #8092af;
-  --meta-content-color: #3783ff;
+    --md-char-color: #8092af;
+    --heading-char-color: #8092af;
+    --meta-content-color: #3783ff;
 
-  --borders: #272c35;
-  --table-border-color: #272c35;
-  --boxes: #1c2027;
-  --boxes-darker: #353b46;
-  --boxes-darker2: #3e4551;
-  --boxes-darkest: #4f5764;
-  --drag-placeholder-color: #3e4551;
+    --borders: #272c35;
+    --table-border-color: #272c35;
+    --boxes: #1c2027;
+    --boxes-darker: #353b46;
+    --boxes-darker2: #3e4551;
+    --boxes-darkest: #4f5764;
+    --drag-placeholder-color: #3e4551;
 
-  --text-color: #e6e7eb;
-  --heading-text-color: white;
-  --light-text-color: #8a92a3;
-  --light-text-color-brighter: #9aa2b1;
-  --codeboxes: #183055;
-  --codeboxes-lighter: #1c375f;
-  --rawblock-edit-panel-bd: transparent;
+    --text-color: #e6e7eb;
+    --heading-text-color: white;
+    --light-text-color: #8a92a3;
+    --light-text-color-brighter: #9aa2b1;
+    --codeboxes: #183055;
+    --codeboxes-lighter: #1c375f;
+    --rawblock-edit-panel-bd: transparent;
 
-  --primary-color-darkest: #001f50;
-  --primary-color-darker2: #00307c;
-  --primary-color-darker: #1968e6;
-  --focus-ring-color: #3783ff;
+    --primary-color-darkest: #001f50;
+    --primary-color-darker2: #00307c;
+    --primary-color-darker: #1968e6;
+    --focus-ring-color: #3783ff;
 
-  --danger-color: rgb(255, 70, 66);
+    --danger-color: rgb(255, 70, 66);
 
-  --node-fill: #5252ad;
-  --node-border: #3f3fb8;
-  --cluster-fill: #ffffde;
-  --cluster-border: #aaaa33;
-  --note-fill: #fff5ad;
-  --note-border: #aaaa33;
+    --node-fill: #5252ad;
+    --node-border: #3f3fb8;
+    --cluster-fill: #ffffde;
+    --cluster-border: #aaaa33;
+    --note-fill: #fff5ad;
+    --note-border: #aaaa33;
 
-  /*****************************/
+    /*****************************/
 
-  --font-family: 'Roboto', sans-serif;
-  --code-font-family: 'Source Code Pro';
-  --monospace: 'Source Code Pro';
+    --font-family: "Roboto", sans-serif;
+    --code-font-family: "Source Code Pro";
+    --monospace: "Source Code Pro";
 }

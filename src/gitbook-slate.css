@@ -1,7 +1,7 @@
 @import "gitbook/fonts.css";
 @import "gitbook/slate-colors.css";
 
-/*by h16nning, yes this code is an absolute mess*/
+/*by 16soundsofsilence, yes this code is an absolute mess*/
 
 html,
 .form-control,
@@ -450,6 +450,7 @@ table tr td:last-child {
     color: white;
     height: 100%;
     white-space: nowrap;
+    overflow: hidden;
 }
 
 .cm-s-inner .CodeMirror-gutter-wrapper {

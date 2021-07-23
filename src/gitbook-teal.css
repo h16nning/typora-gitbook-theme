@@ -1,6 +1,6 @@
 @import "gitbook/fonts.css";
 
-/*by h16nning, yes this code is an absolute mess*/
+/*by 16soundsofsilence, yes this code is an absolute mess*/
 
 :root {
     --bg-color: white;
@@ -505,6 +505,7 @@ table tr td:last-child {
     color: white;
     height: 100%;
     white-space: nowrap;
+    overflow: hidden;
 }
 
 .cm-s-inner .CodeMirror-gutter-wrapper {
