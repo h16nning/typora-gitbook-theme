@@ -1,6 +1,6 @@
 @import "gitbook/fonts.css";
 
-/*by 16soundsofsilence, yes this code is an absolute mess*/
+/*by h16nning, yes this code is an absolute mess*/
 
 :root {
     --bg-color: white;
@@ -1156,8 +1156,8 @@ footer.ty-footer {
     padding: 1rem;
 }
 
-body:not(.os-windows) #typora-sidebar .file-list-item,
-body:not(.os-windows) .ty-search-item {
+body.html-for-mac #typora-sidebar .file-list-item,
+body.html-for-mac .ty-search-item {
     transition-duration: 0.3s !important;
     transition-property: background-color, border, color, height !important;
 }
@@ -1176,7 +1176,7 @@ body:not(.os-windows) .ty-search-item {
     margin-left: 24px;
 }
 
-body:not(.os-windows) #typora-sidebar .ty-search-item-line {
+body.html-for-mac #typora-sidebar .ty-search-item-line {
     transition-duration: 0.2s;
 }
 
@@ -1355,7 +1355,7 @@ body:not(.os-windows) #typora-sidebar .ty-search-item-line {
     cursor: pointer;
 }
 
-body:not(.os-windows)
+body.html-for-mac
     .file-tree-node:not(.file-node-root):not(.file-node-expanded)
     .file-node-background {
     transition-duration: 0.2s;
