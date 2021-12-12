@@ -446,17 +446,9 @@ table tr td:last-child {
     background-color: none;
     border-right: none;
     border-radius: 0px;
-    width: 2rem;
     color: white;
     height: 100%;
-    white-space: nowrap;
-    overflow: hidden;
 }
-
-.cm-s-inner .CodeMirror-gutter-wrapper {
-    left: -2.75rem !important;
-}
-
 .CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
     border-left: solid 2px var(--light-text-color-brighter);
 }
@@ -473,7 +465,6 @@ table tr td:last-child {
 .CodeMirror-linenumber {
     color: white;
     opacity: 0.6;
-    width: 1.9532rem !important /*required*/;
 }
 
 .cm-s-inner .CodeMirror-line::selection,
