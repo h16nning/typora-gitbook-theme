@@ -1967,6 +1967,10 @@ button.active,
     background-color: var(--primary-color) !important;
 }
 
+#searchpanel-regexp-option-btn {
+    right: 57px;
+}
+
 #searchpanel-case-option-btn {
     right: 33px;
 }
