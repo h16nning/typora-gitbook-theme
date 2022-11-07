@@ -287,6 +287,7 @@ blockquote {
     border-left: 4px solid var(--primary-color);
     border-radius: 0.3em;
     padding: 1rem;
+    border-right: 4px solid var(--boxes); /* removes arc with tiny blue color from top-right and bottom-right corner */
 }
 
 blockquote blockquote {
