@@ -342,6 +342,7 @@ blockquote {
     border-left: 4px solid var(--primary-color);
     border-radius: 0.3rem;
     padding: 1rem;
+    border-right: 4px solid var(--boxes); /* removes arc with tiny blue color from top-right and bottom-right corner */
 }
 
 blockquote blockquote {
@@ -614,6 +615,10 @@ table tr td:last-child {
 .cm-s-inner .CodeMirror-selectedtext {
     background-color: rgba(255, 255, 255, 0.1);
 }
+
+.cm-s-inner .cm-search-hit.CodeMirror-selected, .cm-s-inner .cm-search-hit.CodeMirror-selectedtext {
+    background: var(--select-text-bg-color)!important;
+} /* removes black background from code search selected */
 
 .cm-s-typora-default .cm-header,
 .cm-s-typora-default .cm-property {
@@ -1181,9 +1186,9 @@ body.html-for-mac #typora-sidebar .ty-search-item-line {
 
 #typora-sidebar .ty-search-item .ty-search-item-line:hover,
 #typora-sidebar .ty-search-item-line.active {
-    background-color: transparent;
-    color: var(--primary-color);
-}
+    background-color: var(--select-text-bg-color);
+    color: white;
+} /* makes easier identifying which searched item is active in the sidebar */
 
 #typora-sidebar .file-list-item-file-name {
     font-weight: 800;
@@ -1885,7 +1890,7 @@ button.active,
 .content tr.search-hit,
 .search-hit,
 .md-search-hit,
-.md-search-hit.md-search-select,
+/*.md-search-hit.md-search-select,*/
 .md-search-select,
 .ty-file-search-match-text {
     background-color: var(--boxes-darkest);
@@ -1893,6 +1898,10 @@ button.active,
     padding: 0.2rem 0.1rem;
     border-radius: 0.2rem;
 }
+
+.md-search-hit.md-search-select {
+    background-color: var(--select-text-bg-color);
+} /* distinguishes text search selected from text search matched */
 
 /*ZOOM HINT*/
 
