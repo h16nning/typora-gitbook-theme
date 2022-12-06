@@ -20,6 +20,7 @@
     --meta-content-color: #3783ff;
 
     --borders: #272c35;
+    --borders-top-margin: #07080A; /* for dark borders below top margin */
     --table-border-color: #272c35;
     --boxes: #1c2027;
     --boxes-darker: #353b46;

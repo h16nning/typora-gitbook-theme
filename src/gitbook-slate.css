@@ -940,6 +940,14 @@ input[type="checkbox"]:checked:after {
     border-right: solid 1px var(--borders);
 }
 
+#typora-sidebar, #typora-sidebar-resizer, content {
+    border-top: solid 1px var(--borders-top-margin);
+} /* adds dark borders below top margin */
+
+.mac-seamless-mode content {
+    margin-top: unset;
+} /* don't show top margin border in seamless mode */
+
 .info-panel-tab {
     opacity: 1;
 }
