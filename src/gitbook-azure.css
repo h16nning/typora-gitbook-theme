@@ -1009,7 +1009,7 @@ footer.ty-footer {
 } /* adds dark borders below top margin */
 
 .mac-seamless-mode content {
-    margin-top: unset;
+    border-top: solid 1px transparent;
 } /* don't show top margin border in seamless mode */
 
 .info-panel-tab {
