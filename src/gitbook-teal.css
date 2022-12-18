@@ -22,6 +22,7 @@
     --meta-content-color: #15ac8e;
 
     --borders: #e6ecf1;
+    --borders-top-margin: #E5E5E5; /* for dark borders below top margin */
     --table-border-color: #e6ecf1;
     --boxes: #f5f7f9;
     --boxes-darker: #d8e0e7;
@@ -1000,6 +1001,14 @@ footer.ty-footer {
 #typora-sidebar {
     border-right: solid 1px var(--borders);
 }
+
+#typora-sidebar, #typora-sidebar-resizer, content {
+    border-top: solid 1px var(--borders-top-margin);
+} /* adds dark borders below top margin */
+
+.mac-seamless-mode content {
+    border-top: solid 1px transparent;
+} /* don't show top margin border in seamless mode */
 
 .info-panel-tab {
     opacity: 1;
